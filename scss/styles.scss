@@ -1,7 +1,7 @@
 @import 'normalize';
 @import 'variables';
+@import 'grid';
 
-// Base styles
 body {
     font-family: $font-family;
     background-color: $background-color;
@@ -9,8 +9,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-// Skip link for keyboard users
 .skip-link {
     position: absolute;
     top: -40px;

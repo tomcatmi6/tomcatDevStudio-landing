@@ -313,6 +313,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  
 }
 
 .skip-link {
@@ -360,7 +361,19 @@ footer {
   background-color: #6c757d;
   padding: 1rem;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
-
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1280px;
+  min-height: 100vh;
+  align-self: center;
+}
+.active {
+  font-weight: bold;
+  color: red;
+}
 /*# sourceMappingURL=styles.css.map */
