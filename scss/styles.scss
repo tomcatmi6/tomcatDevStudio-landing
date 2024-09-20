@@ -2,6 +2,11 @@
 @import 'variables';
 @import 'grid';
 
+@font-face {
+    font-family: 'TomcatDev';
+    src: url(../assets/fonts/tomcat_dev_bold.ttf);
+}
+
 body {
     font-family: $font-family;
     background-color: $background-color;
@@ -30,33 +35,28 @@ a:focus {
     outline-offset: 2px;
 }
 
-nav {
-    background-color: $primary-color;
-    padding: $padding-medium;
-
-    ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        
-        li {
-            margin-right: $spacing-unit;
-
-            a {
-                color: white;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-}
 
 footer {
     background-color: $secondary-color;
     padding: $padding-medium;
     text-align: center;
     color: white;
+}
+
+.presentation-info {
+    font-family: 'TomcatDev';
+    font-weight: 600;
+}
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
 }

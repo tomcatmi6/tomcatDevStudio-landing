@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="body-container">
     <div class="content-wrapper">
 
         <header class="header-wrapper">
             <div class="header-presentation-wrapper">
                 <div class="presentation-info">
                     <a href="/" class="logo-wrapper">
-                        <img src="assets/images/logo.svg" loading="lazy" alt="Company Name" width="200" height="50"
+                        <img src="assets/images/logo.svg" loading="lazy" alt="Company Name"
                             class="logo-image">
                     </a>
                     <h1>Tomcat Dev Studio</h1>
@@ -37,23 +37,35 @@
                     <p>Tworzę szybkie i skalowalne aplikacje internetowe uwzględniające potrzeby swoich klientów.</p>
                 </div>
                 <nav class="navigation-wrapper" id="navigation-menu">
-                    <ul>
-                        <li><a href="#about">O mnie</a></li>
-                        <li><a href="#experience">Doświadczenie</a></li>
-                        <li><a href="#projects">Projekty</a></li>
+                    <ul class="navigation-menu">
+                        <li><a class="navigation-link" href="#about"><span class="indicator"></span><span>O mnie</span></a></li>
+                        <li><a class="navigation-link" href="#experience"><span class="indicator"></span><span>Doświadczenie</span></a></li>
+                        <li><a class="navigation-link" href="#projects"><span class="indicator"></span><span>Projekty</span></a></li>
                     </ul>
                 </nav>
             </div>
             <ul class="social-links">
-                <li class="social-link"><a href="https://github.com/tomcatmi6" target="_blank"
-                        aria-label="Odnośnik do profilu na Github (otwiera nową zakładkę)" title="Github"><img
+                <li><a href="https://github.com/tomcatmi6" class="social-link" target="_blank"
+                        aria-label="Odnośnik do profilu na Github (otwiera nową zakładkę)" title="Github">
+                        <span class="sr-only">
+                            Odnośnik do profilu na Github (otwiera nową zakładkę)
+                        </span>
+                        <img class="social-icon"
                             src="assets/icons/github.svg" alt="Github - logo przedstawiające symbol portalu GitHub"></a>
                 </li>
-                <li class="social-link"><a href="https://www.linkedin.com/in/piotr-tomczak-1b1b3b1b4/" target="_blank"
-                        aria-label="Odnośnik do profilu na Linkedin (otwiera nową zakładkę)" title="Linkedin"><img
+                <li><a href="https://www.linkedin.com/in/piotr-tomczak-1b1b3b1b4/"  class="social-link" target="_blank"
+                        aria-label="Odnośnik do profilu na Linkedin (otwiera nową zakładkę)" title="Linkedin">
+                        <span class="sr-only">
+                            Odnośnik do profilu na Linkedin (otwiera nową zakładkę)
+                        </span>
+                        <img class="social-icon"
                             src="assets/icons/linkedin.svg" alt="LinkedIn logo - czarne litery l n na białym tle"></a></li>
-                <li class="social-link"><a href=https://www.instagram.com/tomcatmi6" target="_blank"
-                        aria-label="Odnośnik do profilu na Instagramie (otwiera nową zakładkę)" title="Instagram"><img
+                <li><a href=https://www.instagram.com/tomcatmi6"  class="social-link" target="_blank"
+                        aria-label="Odnośnik do profilu na Instagramie (otwiera nową zakładkę)" title="Instagram">
+                        <span class="sr-only">
+                            Odnośnik do profilu na Instagram (otwiera nową zakładkę)
+                        </span>
+                        <img class="social-icon"
                             src="assets/icons/instagram.svg"
                             alt="Logo Instagrama - czarno biała ikona symolizująca obiektywy telefonu"></a></li>
             </ul>

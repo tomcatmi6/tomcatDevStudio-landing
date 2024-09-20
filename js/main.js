@@ -1,22 +1,29 @@
 function updateMenu() {
-    const currentHash = window.location.hash || "#about";
-
     const menuLinks = document.querySelectorAll('#navigation-menu a');
+    const sections = document.querySelectorAll('section');
+    
+    let currentSection = "";
+    const offset = 100; 
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition >= sectionTop - offset && scrollPosition < sectionTop + sectionHeight - offset) {
+            currentSection = section.getAttribute('id'); // Get the current section
+        }
+    });
 
     menuLinks.forEach(link => {
         link.classList.remove('active');
     });
 
-    const activeLink = document.querySelector(`#navigation-menu a[href="${currentHash}"]`);
+    const activeLink = document.querySelector(`#navigation-menu a[href="#${currentSection}"]`);
     if (activeLink) {
         activeLink.classList.add('active');
     }
-    const activeSection = document.querySelector(currentHash);
-    if (activeSection) {
-        activeSection.style.display = 'block';
-    }
 }
 
+window.addEventListener('scroll', updateMenu);
 window.addEventListener('load', updateMenu);
-
-window.addEventListener('hashchange', updateMenu);

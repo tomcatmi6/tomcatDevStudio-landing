@@ -6,9 +6,93 @@
     max-width: 1280px;
     min-height: 100vh;
     align-self: center;
+    position: relative;
+    .header-wrapper {
+      padding: 4rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      max-height: calc(100vh - 8rem);
+      flex: 1;
+      .header-presentation-wrapper {
+        .presentation-info {
+          .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+             max-width: 20rem;
+            }
+          }
+        }
+        .navigation-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: center;
+          gap: 1rem;
+          .navigation-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            .navigation-link {
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              font-weight: 600;
+              text-transform: uppercase;
+              gap: 1rem;
+              &.active, &:hover {
+                .indicator {
+                  width: 6rem;
+                }
+              }
+              .indicator {
+                width: 4rem;
+                border: 1px solid $primary-color;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                transition: width 0.5s ease;
+              }
+            }
+          }
+        }
+      }
+      .social-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        .social-link {
+          display: flex;
+          height: 2rem;
+          width: 2rem;
+          .social-icon {
+            transition: filter 0.3s ease;
+            filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+            &:hover {
+              fill: $primary-color;
+              filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(200deg) brightness(90%) contrast(90%);
+            }
+          }
+        }
+       
+      }
+    }
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 3;
+    }
   }
 
-  body {
+  .body-container {
     display: flex;
     flex-direction: column;
     align-items: center;
