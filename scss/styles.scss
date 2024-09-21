@@ -6,6 +6,10 @@
     font-family: 'TomcatDev';
     src: url(../assets/fonts/tomcat_dev_bold.ttf);
 }
+@font-face {
+    font-family: 'PublicSans';
+    src: url(../assets/fonts/public_sans.ttf);
+}
 
 body {
     font-family: $font-family;
