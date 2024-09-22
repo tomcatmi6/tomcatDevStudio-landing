@@ -450,6 +450,74 @@ template {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: stretch;
+  }
+  .content-wrapper .header-wrapper {
+    position: unset;
+    padding: 0;
+    max-height: auto;
+    border: 1px solid black;
+    align-items: stretch;
+  }
+  .content-wrapper .header-wrapper .social-links {
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-top: 1px solid black;
+    box-shadow: none;
+    width: unset;
+    margin: 0;
+  }
+  .content-wrapper .header-wrapper .social-links .social-link {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .content-wrapper .header-wrapper .social-links .social-link .social-icon {
+    height: 100%;
+    width: 100%;
+  }
+  .content-wrapper .header-wrapper .header-presentation-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    padding: 1rem;
+    box-shadow: none;
+    border: none;
+  }
+  .content-wrapper .header-wrapper .header-presentation-wrapper .presentation-info .logo-wrapper img {
+    max-width: 12rem;
+  }
+  .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper {
+    display: none;
+  }
+  .main-wrapper {
+    flex: unset;
+    margin-top: 0;
+  }
+  .main-wrapper .main-section h2 {
+    font-size: 1.5rem;
+  }
+  .main-wrapper .experience-item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .main-wrapper .experience-item .experience-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-wrapper .experience-item .experience-heading h3 {
+    font-size: 1.1rem;
+  }
+  .main-wrapper .experience-item .experience-date {
+    font-size: 0.85rem;
+  }
+}
 @font-face {
   font-family: "TomcatDev";
   src: url(../assets/fonts/tomcat_dev_bold.ttf);
