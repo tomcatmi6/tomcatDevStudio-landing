@@ -1,8 +1,21 @@
 // color scheme
-$primary-color: #007bff;
-$font-family: Inter, sans-serif;
-$background-color: #f8f9fa;
-$text-color: #333;
-$secondary-color: #6c757d;
+$primary-color: #35bbff;
+$dark-color: #000;
+$bright-color: #fff;
+$secondary-bright-color: #f8f9fa;
+$secondary-dark-color: #333;
+$custom-font-family: 'TomcatDev';
+$content-text-font-family: 'PublicSans';
+$background-color: $secondary-bright-color;
+$box-shadow-highlight: 0px 1px 0px 0px rgba($dark-color, 0.62),
+1px 0px 0px 0px rgba($dark-color, 0.62), 1px 2px 0px 0px rgba($dark-color, 0.62),
+2px 1px 0px 0px rgba($dark-color, 0.62), 2px 3px 0px 0px rgba($dark-color, 0.62),
+3px 2px 0px 0px rgba($dark-color, 0.62), 3px 4px 0px 0px rgba($dark-color, 0.62),
+4px 3px 0px 0px rgba($dark-color, 0.62), 4px 5px 0px 0px rgba($dark-color, 0.62),
+5px 4px 0px 0px rgba($dark-color, 0.62), 5px 6px 0px 0px rgba($dark-color, 0.62),
+6px 5px 0px 0px rgba($dark-color, 0.62), 6px 7px 0px 0px rgba($dark-color, 0.62),
+7px 6px 0px 0px rgba($dark-color, 0.62), 7px 8px 0px 0px rgba($dark-color, 0.62),
+8px 7px 0px 0px rgba($dark-color, 0.62);
+
 $padding-medium: 1rem;
 $spacing-unit: 0.5rem;

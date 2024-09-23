@@ -12,9 +12,9 @@
 }
 
 body {
-    font-family: $font-family;
-    background-color: $background-color;
-    color: $text-color;
+    font-family: $content-text-font-family;
+    background-color: $bright-color;
+    color: $dark-color;
     margin: 0;
     padding: 0;
 }
@@ -23,7 +23,7 @@ body {
     top: -40px;
     left: 0;
     background-color: $primary-color;
-    color: white;
+    color: $bright-color;
     padding: 8px;
     z-index: 100;
     text-decoration: none;
@@ -33,22 +33,25 @@ body {
     top: 0;
 }
 
-// Keyboard focus style
+
 a:focus {
     outline: 2px solid $primary-color;
     outline-offset: 2px;
 }
-
-
+.heading-title-decoration {
+    border-bottom: 2px solid $primary-color; // Use your specific logo's blue
+    padding-bottom: 5px;
+  }
 footer {
-    background-color: $secondary-color;
+    background-color: $bright-color;
     padding: $padding-medium;
     text-align: center;
-    color: white;
+    color: $dark-color;
+    border: thin solid $dark-color;
 }
 
 .presentation-info {
-    font-family: 'TomcatDev';
+    font-family: $custom-font-family;
     font-weight: 600;
 }
 .sr-only {
