@@ -78,6 +78,7 @@
   display: flex;
   list-style: none;
   padding: 1rem;
+  margin: 0;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -103,7 +104,7 @@
   flex: 3;
   font-family: "Inter", sans-serif;
   line-height: 26px;
-  margin-top: 4rem;
+  padding: 4rem 0;
   gap: 2rem;
   font-family: "PublicSans";
 }
@@ -190,6 +191,10 @@
 }
 .default-grid-box.project-item {
   padding: 0.5rem;
+}
+.default-grid-box.project-item .image-container {
+  box-shadow: 11px 10px 0px -6px #333;
+  border: thin solid #333;
 }
 .default-grid-box.project-item .image-container .project-image {
   max-width: 100%;
