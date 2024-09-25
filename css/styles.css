@@ -575,6 +575,40 @@ template {
   align-items: center;
 }
 
+.details-cell {
+  min-width: 0;
+  max-width: 50vw;
+}
+
+.project-details {
+  margin: 1.3rem 0;
+  padding: 0.5rem;
+  height: auto;
+  max-height: 1.5rem; /* set to line height */
+  transition: all 0.1s ease;
+  max-width: 25vw;
+  min-width: 25vw;
+}
+.project-details[open] {
+  max-height: 99rem;
+  transition: all 1s ease;
+}
+.project-details[open] .project-summary {
+  margin-bottom: 0.8em;
+}
+.project-details .project-summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+tr {
+  transition: height 0.5s ease;
+}
+
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
@@ -662,16 +696,13 @@ table th, table td {
 }
 
 table th {
-  background-color: #1a1a1a;
+  background-color: #333;
+  color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 table tr:nth-child(even) {
   background-color: #fafafa;
-}
-
-table td a {
-  color: #76b0ff;
-  text-decoration: none;
 }
 
 table td a:hover {
