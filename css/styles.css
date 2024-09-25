@@ -317,6 +317,31 @@ template {
   align-self: center;
   position: relative;
 }
+.content-wrapper.projects {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.content-wrapper.projects .header-wrapper {
+  padding: 0;
+  align-items: start;
+  justify-content: start;
+  position: unset;
+  max-height: unset;
+}
+.content-wrapper.projects .technology-list.table-cell {
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+.content-wrapper.projects .technology-list.table-cell .technology-list-item {
+  background-color: rgba(53, 187, 255, 0.3);
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+}
 .content-wrapper .header-wrapper {
   padding: 4rem 0;
   display: flex;
@@ -622,6 +647,78 @@ template {
   }
   .content-wrapper .main-wrapper .experience-item .experience-date {
     font-size: 0.85rem;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #1a1a1a;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+table td a {
+  color: #76b0ff;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #333;
+    margin-bottom: 10px;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before {
+    content: "Year";
+  }
+  td:nth-of-type(2):before {
+    content: "Project";
+  }
+  td:nth-of-type(3):before {
+    content: "Made at";
+  }
+  td:nth-of-type(4):before {
+    content: "Built with";
+  }
+  td:nth-of-type(5):before {
+    content: "Link";
   }
 }
 @font-face {
