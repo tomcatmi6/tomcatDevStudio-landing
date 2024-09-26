@@ -2,12 +2,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  padding: 0 1rem;
 }
 
 table th,
 table td {
   border: 1px solid $secondary-dark-color;
-  padding: 12px;
+  padding: 1rem;
   text-align: left;
 }
 
@@ -18,7 +19,7 @@ table th {
 }
 
 table tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: $secondary-bright-color;
 }
 
 table td a:hover {
@@ -42,39 +43,37 @@ table td a:hover {
   }
 
   tr {
-    border: 1px solid #333;
+    border: 1px solid $secondary-dark-color;
     margin-bottom: 10px;
   }
 
   td {
     border: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid $secondary-dark-color;
     position: relative;
     padding-left: 50%;
   }
 
   td:before {
-    position: absolute;
-    top: 12px;
-    left: 12px;
     width: 45%;
-    padding-right: 10px;
+    padding-right: 0.8rem;
     white-space: nowrap;
+    font-weight: 600;
   }
 
   td:nth-of-type(1):before {
-    content: "Year";
+    content: "Rok";
   }
   td:nth-of-type(2):before {
-    content: "Project";
+    content: "Nazwa Projektu";
   }
   td:nth-of-type(3):before {
-    content: "Made at";
+    content: "Opis";
   }
   td:nth-of-type(4):before {
-    content: "Built with";
+    content: "Technologie";
   }
-  td:nth-of-type(5):before {
-    content: "Link";
+  .project-details {
+    max-width: unset;
   }
 }

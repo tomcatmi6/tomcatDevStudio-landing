@@ -320,6 +320,7 @@ template {
 .content-wrapper.projects {
   flex-direction: column;
   gap: 1.5rem;
+  padding: 2rem 0;
 }
 .content-wrapper.projects .header-wrapper {
   padding: 0;
@@ -327,6 +328,9 @@ template {
   justify-content: start;
   position: unset;
   max-height: unset;
+}
+.content-wrapper.projects .main-wrapper {
+  padding: 0;
 }
 .content-wrapper.projects .technology-list.table-cell {
   list-style: none;
@@ -508,6 +512,25 @@ template {
 .external-link:hover, .external-link:focus {
   box-shadow: 1px 1px 0 0 #000;
 }
+.external-link.back-link {
+  font-weight: 600;
+  border-width: 2px;
+}
+.external-link.back-link::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+  margin-right: 0.25em;
+  background-size: 100%;
+  background-image: url("../assets/icons/chevron_right.svg");
+  transform: rotate(180deg);
+}
+.external-link.back-link::after {
+  content: unset;
+  display: none;
+}
 .external-link::after {
   content: "";
   display: inline-block;
@@ -517,12 +540,18 @@ template {
   background-size: 100%;
   background-image: url("../assets/icons/external_link.svg");
 }
-.external-link.additional-data {
+.external-link.local-link {
   align-self: flex-start;
   font-weight: 600;
   border-width: medium;
 }
-.external-link.additional-data:hover, .external-link.additional-data:focus {
+.external-link.local-link::after {
+  background-image: url("../assets/icons/chevron_right.svg");
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+.external-link.local-link:hover, .external-link.local-link:focus {
   box-shadow: 2px 2px 0 0 #000;
 }
 
@@ -695,12 +724,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  padding: 0 1rem;
 }
 
 table th,
 table td {
   border: 1px solid #333;
-  padding: 12px;
+  padding: 1rem;
   text-align: left;
 }
 
@@ -711,7 +741,7 @@ table th {
 }
 
 table tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: #f8f9fa;
 }
 
 table td a:hover {
@@ -743,27 +773,25 @@ table td a:hover {
     padding-left: 50%;
   }
   td:before {
-    position: absolute;
-    top: 12px;
-    left: 12px;
     width: 45%;
-    padding-right: 10px;
+    padding-right: 0.8rem;
     white-space: nowrap;
+    font-weight: 600;
   }
   td:nth-of-type(1):before {
-    content: "Year";
+    content: "Rok";
   }
   td:nth-of-type(2):before {
-    content: "Project";
+    content: "Nazwa Projektu";
   }
   td:nth-of-type(3):before {
-    content: "Made at";
+    content: "Opis";
   }
   td:nth-of-type(4):before {
-    content: "Built with";
+    content: "Technologie";
   }
-  td:nth-of-type(5):before {
-    content: "Link";
+  .project-details {
+    max-width: unset;
   }
 }
 @font-face {
