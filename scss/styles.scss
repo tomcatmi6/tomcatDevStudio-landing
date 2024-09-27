@@ -1,14 +1,14 @@
-@import 'normalize';
-@import 'variables';
-@import 'grid';
-@import 'table';
+@import "normalize";
+@import "variables";
+@import "grid";
+@import "table";
 
 @font-face {
-    font-family: 'TomcatDev';
+    font-family: "TomcatDev";
     src: url(../assets/fonts/tomcat_dev_bold.ttf);
 }
 @font-face {
-    font-family: 'PublicSans';
+    font-family: "PublicSans";
     src: url(../assets/fonts/public_sans.ttf);
 }
 
@@ -19,52 +19,36 @@ body {
     margin: 0;
     padding: 0;
 }
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: $primary-color;
-    color: $bright-color;
-    padding: 8px;
-    z-index: 100;
-    text-decoration: none;
-}
 
-.skip-link:focus {
-    top: 0;
-}
-
-
-a:focus {
-    outline: 2px solid $primary-color;
-    outline-offset: 2px;
-}
 .heading-title-decoration {
-    border-bottom: 2px solid $primary-color; 
-    padding-bottom: 5px;
-  }
-footer {
+    border-bottom: medium solid $primary-color;
+    padding-bottom: 0.5rem;
+}
+
+.footer {
     background-color: $bright-color;
     padding: $padding-medium;
     text-align: center;
     color: $dark-color;
     border: thin solid $dark-color;
+    margin-bottom: 1rem;
 }
 
 .presentation-info {
     font-family: $custom-font-family;
     font-weight: 600;
 }
+
 .sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
-	-webkit-clip-path: inset(50%) !important;
-		clip-path: inset(50%) !important;  /* 2 */
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;            /* 3 */
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important; /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important; /* 3 */
 }

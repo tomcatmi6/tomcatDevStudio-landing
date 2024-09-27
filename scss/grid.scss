@@ -133,6 +133,10 @@
       }
     }
   }
+  .personal-info-content {
+    padding: 0;
+    margin: 0;
+  }
   .divider {
     display: flex;
     border-top: thin solid $dark-color;
@@ -199,18 +203,18 @@
 }
 .external-link {
   text-decoration: dotted;
-  color: $secondary-dark-color;
+  color: $dark-color;
   font-size: inherit;
   padding: 0.1rem 0.3rem;
   position: relative;
-  border: thin solid $dark-color;
+  border: thin solid $primary-color-dark;
   transition: box-shadow 0.3s ease;
   box-shadow: 1px 1px 0 0 transparent;
   margin-right: 0.1rem;
   white-space: nowrap;
   &:hover,
   &:focus {
-    box-shadow: 1px 1px 0 0 $dark-color;
+    box-shadow: 1px 1px 0 0 $primary-color-dark;
   }
   &.back-link {
     font-weight: 600;
@@ -252,7 +256,7 @@
     }
     &:hover,
     &:focus {
-      box-shadow: 2px 2px 0 0 $dark-color;
+      box-shadow: 2px 2px 0 0 $primary-color-dark;
     }
   }
 }
@@ -346,7 +350,13 @@ tr {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
-    align-items: stretch;
+    align-items: stretch; 
+    &.projects {
+      padding: 1rem;
+      .header-wrapper {
+        border: none;
+      }
+    }
     .header-wrapper {
       position: unset;
       padding: 0;
@@ -437,5 +447,8 @@ tr {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+  }
+  .external-link {
+    box-shadow: 2px 2px 0 0 $primary-color-dark;
   }
 }
