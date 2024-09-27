@@ -1,13 +1,22 @@
-// color scheme
+// color palette
 $primary-color: #35bbff;
 $primary-color-dark: #0077cc;
 $dark-color: #000;
 $bright-color: #fff;
 $secondary-bright-color: #f8f9fa;
 $secondary-dark-color: #333;
+$background-color: $secondary-bright-color;
+$anchor-color: rgba($primary-color, 0.3);
+// font family
 $custom-font-family: 'TomcatDev';
 $content-text-font-family: 'PublicSans';
-$background-color: $secondary-bright-color;
+// font size
+$font-size-small: 0.8rem;
+$font-size-base: 1rem;
+$font-size-medium: 1.1rem;
+$font-size-large: 1.2rem;
+$font-size-xlarge: 1.5rem;
+// spacing and box shadow
 $box-shadow-highlight: 0px 1px 0px 0px rgba($dark-color, 0.62),
 1px 0px 0px 0px rgba($dark-color, 0.62), 1px 2px 0px 0px rgba($dark-color, 0.62),
 2px 1px 0px 0px rgba($dark-color, 0.62), 2px 3px 0px 0px rgba($dark-color, 0.62),
@@ -17,6 +26,5 @@ $box-shadow-highlight: 0px 1px 0px 0px rgba($dark-color, 0.62),
 6px 5px 0px 0px rgba($dark-color, 0.62), 6px 7px 0px 0px rgba($dark-color, 0.62),
 7px 6px 0px 0px rgba($dark-color, 0.62), 7px 8px 0px 0px rgba($dark-color, 0.62),
 8px 7px 0px 0px rgba($dark-color, 0.62);
-$anchor-color: rgba($primary-color, 0.3);
 $padding-medium: 1rem;
 $spacing-unit: 0.5rem;

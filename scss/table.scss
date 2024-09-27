@@ -2,11 +2,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
+  box-shadow: $box-shadow-highlight;
 }
 
 table th,
 table td {
-  border: 1px solid $secondary-dark-color;
+  border: thin solid $secondary-dark-color;
   padding: 1rem;
   text-align: left;
 }
@@ -25,6 +26,11 @@ table td a:hover {
   text-decoration: underline;
 }
 
+.details-cell {
+  min-width: 0;
+  max-width: 50vw;
+}
+
 @media screen and (max-width: 768px) {
   table,
   thead,
@@ -35,6 +41,10 @@ table td a:hover {
     display: block;
   }
 
+  table {
+    box-shadow: none;
+  }
+
   thead tr {
     position: absolute;
     top: -9999px;
@@ -42,14 +52,14 @@ table td a:hover {
   }
 
   tr {
-    border: 1px solid $secondary-dark-color;
+    border: thin solid $secondary-dark-color;
     margin-bottom: 1rem;
     box-shadow: 4px 4px 0 0 $secondary-dark-color;
   }
 
   td {
     border: none;
-    border-bottom: 1px solid $secondary-dark-color;
+    border-bottom: thin solid $secondary-dark-color;
     position: relative;
     padding-left: 50%;
   }
@@ -73,7 +83,9 @@ table td a:hover {
   td:nth-of-type(4):before {
     content: "Technologie:";
   }
-  .project-details {
-    max-width: unset;
+  .main-wrapper {
+    .project-details {
+      max-width: unset;
+    }
   }
 }
