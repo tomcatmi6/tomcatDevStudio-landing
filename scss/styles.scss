@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .heading-title-decoration {
@@ -183,6 +184,16 @@
         }
     }
 }
+
+.language-link-wrapper {
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    right: -4rem;
+    box-shadow: $box-shadow-highlight;
+    padding: 0.5rem;
+}
+
 .external-link {
     text-decoration: dotted;
     color: $dark-color;
@@ -229,16 +240,34 @@
     &.local-link {
         align-self: flex-start;
         font-weight: 600;
-        border-width: medium;
+        border-width: thin;
+        box-shadow: 2px 2px 0 0 $primary-color-dark;
         &::after {
             background-image: url("../assets/icons/chevron_right.svg");
             width: 1rem;
             height: 1rem;
             vertical-align: text-bottom;
+            background-repeat: no-repeat;
         }
         &:hover,
         &:focus {
-            box-shadow: 2px 2px 0 0 $primary-color-dark;
+            box-shadow: 3px 3px 0 0 $primary-color-dark;
+        }
+        
+    }
+    &.language-link {
+        width: 1rem;
+        height: 1rem;
+        padding: 0.2rem 0.5rem;
+        background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(../assets/icons/english_flag.svg);
+            background-position: center;
+        &.polish {
+            background-image: url(../assets/icons/polish_flag.svg);
+        }
+        &::after {
+            display: none;
         }
     }
 }
@@ -436,6 +465,12 @@ tr {
         }
     }
 
+    .language-link-wrapper {
+        top: 1rem;
+        right: unset;
+        box-shadow: 2px 2px 0 0 $primary-color-dark;
+    }
+
     .default-grid-box.project-item {
         display: flex;
         flex-wrap: wrap;
@@ -448,6 +483,7 @@ tr {
         box-shadow: 2px 2px 0 0 $primary-color-dark;
     }
 }
+
 
 .footer {
     background-color: $bright-color;

@@ -11,7 +11,7 @@ function updateMenu() {
         const scrollPosition = window.pageYOffset;
 
         if (scrollPosition >= sectionTop - offset && scrollPosition < sectionTop + sectionHeight - offset) {
-            currentSection = section.getAttribute('id'); // Get the current section
+            currentSection = section.getAttribute('id'); 
         }
     });
 

@@ -407,6 +407,7 @@ table td a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 2rem;
 }
 
 .heading-title-decoration {
@@ -564,6 +565,15 @@ table td a:hover {
   font-size: 1.2rem;
 }
 
+.language-link-wrapper {
+  display: flex;
+  position: absolute;
+  top: 4rem;
+  right: -4rem;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.62), 1px 0px 0px 0px rgba(0, 0, 0, 0.62), 1px 2px 0px 0px rgba(0, 0, 0, 0.62), 2px 1px 0px 0px rgba(0, 0, 0, 0.62), 2px 3px 0px 0px rgba(0, 0, 0, 0.62), 3px 2px 0px 0px rgba(0, 0, 0, 0.62), 3px 4px 0px 0px rgba(0, 0, 0, 0.62), 4px 3px 0px 0px rgba(0, 0, 0, 0.62), 4px 5px 0px 0px rgba(0, 0, 0, 0.62), 5px 4px 0px 0px rgba(0, 0, 0, 0.62), 5px 6px 0px 0px rgba(0, 0, 0, 0.62), 6px 5px 0px 0px rgba(0, 0, 0, 0.62), 6px 7px 0px 0px rgba(0, 0, 0, 0.62), 7px 6px 0px 0px rgba(0, 0, 0, 0.62), 7px 8px 0px 0px rgba(0, 0, 0, 0.62), 8px 7px 0px 0px rgba(0, 0, 0, 0.62);
+  padding: 0.5rem;
+}
+
 .external-link {
   text-decoration: dotted;
   color: #000;
@@ -610,16 +620,33 @@ table td a:hover {
 .external-link.local-link {
   align-self: flex-start;
   font-weight: 600;
-  border-width: medium;
+  border-width: thin;
+  box-shadow: 2px 2px 0 0 #0077cc;
 }
 .external-link.local-link::after {
   background-image: url("../assets/icons/chevron_right.svg");
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
+  background-repeat: no-repeat;
 }
 .external-link.local-link:hover, .external-link.local-link:focus {
-  box-shadow: 2px 2px 0 0 #0077cc;
+  box-shadow: 3px 3px 0 0 #0077cc;
+}
+.external-link.language-link {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.2rem 0.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/icons/english_flag.svg);
+  background-position: center;
+}
+.external-link.language-link.polish {
+  background-image: url(../assets/icons/polish_flag.svg);
+}
+.external-link.language-link::after {
+  display: none;
 }
 
 .default-grid-box {
@@ -796,6 +823,11 @@ tr {
   }
   .content-wrapper .main-wrapper .experience-item .experience-date {
     font-size: 0.8rem;
+  }
+  .language-link-wrapper {
+    top: 1rem;
+    right: unset;
+    box-shadow: 2px 2px 0 0 #0077cc;
   }
   .default-grid-box.project-item {
     display: flex;
