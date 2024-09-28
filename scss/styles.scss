@@ -5,10 +5,12 @@
 @font-face {
     font-family: "TomcatDev";
     src: url(../assets/fonts/tomcat_dev_bold.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: "PublicSans";
     src: url(../assets/fonts/public_sans.ttf);
+    font-display: swap;
 }
 
 .body-container {
@@ -21,6 +23,8 @@
     flex-direction: column;
     align-items: center;
     padding: 0 2rem;
+    // Safari font rendering fix
+    font-synthesis: none;
 }
 
 .heading-title-decoration {
@@ -73,7 +77,10 @@
                     align-items: center;
                     gap: 1rem;
                     img {
+                        height: 112px;
+                        width: 308px;
                         max-width: 20rem;
+                        height: auto;
                     }
                 }
             }
@@ -102,13 +109,16 @@
                         &.active,
                         &:hover {
                             .navigation-link-content {
-                                color: $primary-color;
+                                color: $primary-color-darkest;
                             }
                             .indicator {
                                 width: 6rem;
-                                border-color: $primary-color;
-                                background-color: $primary-color;
+                                border-color: $primary-color-darkest;
+                                background-color: $primary-color-darkest;
                             }
+                        }
+                        &:focus {
+                            outline: thick solid $focus-color;
                         }
                         .indicator {
                             width: 4rem;
@@ -136,6 +146,9 @@
                 display: flex;
                 height: 2rem;
                 width: 2rem;
+                &:focus {
+                    outline: thick solid $focus-color;
+                }
                 .social-icon {
                     transition: filter 0.3s ease;
                     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
@@ -205,10 +218,14 @@
     box-shadow: 1px 1px 0 0 transparent;
     margin-right: 0.1rem;
     white-space: nowrap;
-    &:hover,
-    &:focus {
+    &:hover{
         box-shadow: 1px 1px 0 0 $primary-color-dark;
     }
+    
+    &:focus {
+    outline: thick solid $focus-color;
+    }
+    
     &.back-link {
         font-weight: 600;
         border-width: 2px;
@@ -280,7 +297,7 @@
     grid-auto-rows: minmax(auto, auto);
 
     .experience-date {
-        color: $primary-color;
+        color: $primary-color-darkest;
         font-size: $font-size-small;
         text-transform: uppercase;
         font-weight: 600;
@@ -316,7 +333,10 @@
             border: thin solid $secondary-dark-color;
 
             .project-image {
+                height: 117px;
+                width: 206px;
                 max-width: 100%;
+                height: auto;
             }
         }
         .content-container {

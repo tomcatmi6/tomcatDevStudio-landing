@@ -393,10 +393,12 @@ table td a:hover {
 @font-face {
   font-family: "TomcatDev";
   src: url(../assets/fonts/tomcat_dev_bold.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: "PublicSans";
   src: url(../assets/fonts/public_sans.ttf);
+  font-display: swap;
 }
 .body-container {
   font-family: "PublicSans";
@@ -408,6 +410,7 @@ table td a:hover {
   flex-direction: column;
   align-items: center;
   padding: 0 2rem;
+  font-synthesis: none;
 }
 
 .heading-title-decoration {
@@ -463,7 +466,10 @@ table td a:hover {
   gap: 1rem;
 }
 .content-wrapper .header-wrapper .header-presentation-wrapper .presentation-info .logo-wrapper img {
+  height: 112px;
+  width: 308px;
   max-width: 20rem;
+  height: auto;
 }
 .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper {
   display: flex;
@@ -491,12 +497,15 @@ table td a:hover {
   color: #000;
 }
 .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link.active .navigation-link-content, .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link:hover .navigation-link-content {
-  color: #35bbff;
+  color: #005c99;
 }
 .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link.active .indicator, .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link:hover .indicator {
   width: 6rem;
-  border-color: #35bbff;
-  background-color: #35bbff;
+  border-color: #005c99;
+  background-color: #005c99;
+}
+.content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link:focus {
+  outline: thick solid #FF1A1A;
 }
 .content-wrapper .header-wrapper .header-presentation-wrapper .navigation-wrapper .navigation-menu .navigation-link .indicator {
   width: 4rem;
@@ -521,6 +530,9 @@ table td a:hover {
   display: flex;
   height: 2rem;
   width: 2rem;
+}
+.content-wrapper .header-wrapper .social-links .social-link:focus {
+  outline: thick solid #FF1A1A;
 }
 .content-wrapper .header-wrapper .social-links .social-link .social-icon {
   transition: filter 0.3s ease;
@@ -586,8 +598,11 @@ table td a:hover {
   margin-right: 0.1rem;
   white-space: nowrap;
 }
-.external-link:hover, .external-link:focus {
+.external-link:hover {
   box-shadow: 1px 1px 0 0 #0077cc;
+}
+.external-link:focus {
+  outline: thick solid #FF1A1A;
 }
 .external-link.back-link {
   font-weight: 600;
@@ -657,7 +672,7 @@ table td a:hover {
   grid-auto-rows: minmax(auto, auto);
 }
 .default-grid-box .experience-date {
-  color: #35bbff;
+  color: #005c99;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -691,7 +706,10 @@ table td a:hover {
   border: thin solid #333;
 }
 .default-grid-box.project-item .image-container .project-image {
+  height: 117px;
+  width: 206px;
   max-width: 100%;
+  height: auto;
 }
 .default-grid-box.project-item .content-container {
   padding: 0 1rem;
