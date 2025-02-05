@@ -706,7 +706,7 @@ table td a:hover {
   border: thin solid #333;
 }
 .default-grid-box.project-item .image-container .project-image {
-  height: 117px;
+  max-height: 117px;
   width: 206px;
   max-width: 100%;
   height: auto;
@@ -763,6 +763,18 @@ tr {
   transition: height 0.5s ease;
 }
 
+@media (max-width: 1024px) {
+  .main-section .default-grid-box {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .main-section .default-grid-box .image-container {
+    width: fit-content;
+  }
+  .main-section .default-grid-box.project-item .content-container {
+    padding: 0;
+  }
+}
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;

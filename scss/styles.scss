@@ -218,14 +218,14 @@
     box-shadow: 1px 1px 0 0 transparent;
     margin-right: 0.1rem;
     white-space: nowrap;
-    &:hover{
+    &:hover {
         box-shadow: 1px 1px 0 0 $primary-color-dark;
     }
-    
+
     &:focus {
-    outline: thick solid $focus-color;
+        outline: thick solid $focus-color;
     }
-    
+
     &.back-link {
         font-weight: 600;
         border-width: 2px;
@@ -270,16 +270,15 @@
         &:focus {
             box-shadow: 3px 3px 0 0 $primary-color-dark;
         }
-        
     }
     &.language-link {
         width: 1rem;
         height: 1rem;
         padding: 0.2rem 0.5rem;
         background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url(../assets/icons/english_flag.svg);
-            background-position: center;
+        background-size: cover;
+        background-image: url(../assets/icons/english_flag.svg);
+        background-position: center;
         &.polish {
             background-image: url(../assets/icons/polish_flag.svg);
         }
@@ -333,7 +332,7 @@
             border: thin solid $secondary-dark-color;
 
             .project-image {
-                height: 117px;
+                max-height: 117px;
                 width: 206px;
                 max-width: 100%;
                 height: auto;
@@ -390,6 +389,23 @@
 
 tr {
     transition: height 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+    .main-section .default-grid-box {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+
+        .image-container {
+            width: fit-content;
+        }
+
+        &.project-item {
+            .content-container {
+                padding: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -503,7 +519,6 @@ tr {
         box-shadow: 2px 2px 0 0 $primary-color-dark;
     }
 }
-
 
 .footer {
     background-color: $bright-color;
